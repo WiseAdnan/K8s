@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1 
+kind: Role
+metadata:
+ namespace: apache-ns
+ name: user1-role
+rules:
+ - apiGroups: [""]
+   resources: ["pods", "services", "container", "deployment"]
+   verbs: ["get", "list", "watch"]
